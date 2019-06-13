@@ -1,9 +1,6 @@
 'use strict'
 // 課題4 再帰
 
-// 10進数
-const DECIMAL = 10
-
 // 正の整数を判定する
 function isPositiveInteger(text) {
   return !(isNaN(text) || Math.sign(text) < 1 || text.indexOf('.') !== -1)
@@ -20,5 +17,5 @@ if (!isPositiveInteger(text)) {
   console.log('不正な値が入力されました。 ' + text)
 } else {
   console.log('入力：' + text)
-  console.log('出力：' + recursive(parseInt(text, DECIMAL)))
+  console.log('出力：' + recursive(parseInt(text, 10)))
 }
